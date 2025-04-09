@@ -1,0 +1,28 @@
+.cart-page {
+  padding: 1rem 0;
+}
+
+.cart-page h1 {
+  margin-bottom: 2rem;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.empty-cart p {
+  font-size: 1.2rem;
+  color: var(--medium-gray);
+  margin-bottom: 1.5rem;
+}
+
+.checkout-message {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .cart-page h1 {
+    font-size: 1.5rem;
+  }
+}

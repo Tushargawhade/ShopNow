@@ -1,55 +1,19 @@
 import React from "react";
+import Home from "./components/Home";
+import {Routes , Route} from "react-router-dom"
+import Details from "./components/Details";
+
 
 function App() {
   return (
     <div className="w-screen h-screen flex">
 
-      <nav className="h-full w-[15%] bg-zinc-100 p-2 flex flex-col items-center   ">
-        <button className="px-3 py-1 border border-blue-300 text-blue-400 rounded mt-5 ">
-          Add New Product
-        </button>
+      <Routes>
 
-        <hr className="w-[80%] my-4" />
+        <Route path="/" element={<Home />} />
+        <Route path="/details/:id" element={<Details />} />
 
-        <h1 className="w-[80%] text-2xl  font-semibold  ">Category</h1>
-
-        <ul className="w-[80%] mt-3">
-          <li className="flex items-center mb-2">
-            <span className="w-4.5 h-4.5 rounded-full bg-blue-200 mr-2"></span>
-            cat 1
-          </li>
-
-          <li className="flex items-center mb-2">
-            <span className="w-4.5 h-4.5 rounded-full bg-pink-200 mr-2"></span>
-            cat 1
-          </li>
-
-          <li className="flex items-center mb-2">
-            <span className="w-4.5 h-4.5 rounded-full bg-green-200 mr-2"></span>
-            cat 1
-          </li>
-        </ul>
-      </nav>
-
-      <div className="h-full w-[85%] bg-zinc-200 p-8 pt-[5%] flex flex-wrap overflow-x-hidden overflow-y-auto">
-
-
-
-        <div className="card w-[18%] h-[35vh] flex flex-col justify-center items-center mr-3 mb-3 border shadow  ">
-          <div
-            className="w-full h-[75%] bg-contain bg-no-repeat bg-center mb-3 hover:scale-110"
-            style={{
-              backgroundImage:
-                "url(https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png)",
-            }}
-          ></div>
-          <h1 className="hover:test-blue-400">Lorem dolor sit amet.</h1>
-        </div>
-
-
-
-
-      </div>
+      </Routes>
 
     </div>
 

@@ -14,7 +14,7 @@ function Details() {
             <h1 className="text-3xl font-semibold ">
                 Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
             </h1>
-            <h3 className="text-zinc-400 py-1">men's clothing</h3>
+            <h3 className="text-zinc-500 py-1">men's clothing</h3>
             <h2 className="text-red-400 py-1">$ 109.95</h2>
             <p className="text-sm pb-[6%]">
                 Your perfect pack for everyday use and walks in the forest. Stash your

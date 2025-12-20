@@ -11,8 +11,10 @@ function Details() {
     try {
       const { data } = await axios.get(`/products/${id}`);
       setProduct(data);
-      console.log(data);
-    } catch (error) {
+    //   console.log(data);
+
+    } 
+    catch (error) {
       console.log(error);
     }
   };
@@ -41,8 +43,10 @@ function Details() {
         <Link className="px-3 py-1 border border-red-300 text-red-400 rounded mt-5 ">
           Delete
         </Link>
+        
       </div>
     </div>
+
   ) : (
     <Loading />
   );

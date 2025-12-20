@@ -2,7 +2,7 @@ import React from 'react'
 
 function Nav() {
   return (
-    <nav className="h-full w-[15%] bg-zinc-100 p-2 flex flex-col items-center   ">
+    <nav className="h-full w-[15%] bg-zinc-200 p-2 flex flex-col items-center   ">
         <button className="px-3 py-1 border border-blue-300 text-blue-400 rounded mt-5 ">
           Add New Product
         </button>

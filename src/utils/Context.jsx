@@ -1,7 +1,6 @@
 import axios from "./axios";
 import React, { createContext, useEffect, useState } from "react";
 
-
 export const ProductContext = createContext();
 
 function Context(props) {
@@ -13,7 +12,7 @@ function Context(props) {
     try{
       const {data} = await axios("/products");
       console.log(data);
-      setProducts(data)
+      setProducts(data);
 
     }catch(error){
       console.log(error);

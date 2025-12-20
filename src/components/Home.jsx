@@ -14,7 +14,7 @@ function Home() {
       <div className="h-full w-[85%] bg-zinc-50 p-8 pt-[5%] flex flex-wrap overflow-x-hidden overflow-y-auto">
         {products.map((p, i) => (
           <Link
-            to={"/details/1"}
+            to={`/details/${p.id}`}
             className="card w-[19%] h-[38vh] flex flex-col justify-center items-center mr-3 mb-3 border shadow  "
           >
             <div

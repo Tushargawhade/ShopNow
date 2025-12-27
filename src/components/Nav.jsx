@@ -12,7 +12,7 @@ function Nav() {
 
   distinct_category = [...new Set(distinct_category)];
 
-  console.log(distinct_category)
+  // console.log(distinct_category)
 
 
   

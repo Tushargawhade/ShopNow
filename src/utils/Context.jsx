@@ -5,13 +5,12 @@ export const ProductContext = createContext();
 
 function Context(props) {
   const [products, setProducts] = useState(null);
-
-
+  
 
   const getproducts = async () => {
     try{
       const {data} = await axios("/products");
-      console.log(data);
+      // console.log(data);
       setProducts(data);
 
     }catch(error){

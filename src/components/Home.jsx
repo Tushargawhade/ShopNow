@@ -1,12 +1,16 @@
 import React, { useContext } from "react";
 import Nav from "./Nav";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ProductContext } from "../utils/Context";
 import Loading from "./Loading";
 
 function Home() {
   const [products] = useContext(ProductContext);
 
+    const {search} = useLocation();
+    console.log(search);
+
+    
   return products ? (
     <>
       <Nav />

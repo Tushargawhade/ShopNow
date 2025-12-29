@@ -7,17 +7,17 @@ import axios from "../utils/axios";
 
 function Home() {
   const [products] = useContext(ProductContext);
-  
-  const { search } = useLocation();
-
+  const { search } = useLocation();   
   const category = decodeURIComponent(search.split("=")[1]);
+  
+  // let filteredproducts = products;
 
-  const [filteredproducts, setfilteredproducts] = useState(products);
+  const [filteredproducts, setfilteredproducts] = useState(null);
 
 
   
   const getproductscategory = async () => {
-    try {
+    try { 
       const { data } = await axios.get(`/products/category/${category}`);
       setfilteredproducts(data);
       // console.log(data);
@@ -27,10 +27,11 @@ function Home() {
   };
 
   useEffect(() => {
-    if (category.length > 0) getproductscategory();
-  }, [category]);
+    if (!filteredproducts) setfilteredproducts(products);
+    if (category != "undefined") getproductscategory();
+  }, [category,products]);
 
-  console.log(filteredproducts);
+  console.log(filteredproducts); 
 
   return products ? (
     <>
@@ -38,7 +39,7 @@ function Home() {
 
       <div className="h-full w-[85%] bg-zinc-50 p-8 pt-[5%] flex flex-wrap overflow-x-hidden overflow-y-auto">
         { 
-           products.map((p, i) => (
+           filteredproducts && filteredproducts.map((p, i) => (
             <Link
               key={p.id}
               to={`/details/${p.id}`}

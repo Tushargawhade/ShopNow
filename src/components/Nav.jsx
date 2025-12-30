@@ -20,10 +20,12 @@ function Nav() {
 
   return (
     <nav className="h-full w-[15%] bg-zinc-200 p-2 flex flex-col items-center   ">
-      <button className="px-3 py-1 border border-blue-300 text-blue-400 rounded mt-5 ">
-        Add New Product
-      </button>
-
+      <a 
+        href="/create" 
+        className="px-3 py-1 border border-blue-300 text-blue-400 rounded mt-5 "
+        >
+          Add New Product
+      </a>
       <hr className="w-[80%] my-4" />
 
       <h1 className="w-[80%] text-2xl  font-semibold  ">Category</h1>

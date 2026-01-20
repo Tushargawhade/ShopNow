@@ -7,21 +7,21 @@ function Context(props) {
   const [products, setProducts] = useState(null);
   
 
-  const getproducts = async () => {
-    try{
-      const {data} = await axios("/products");
-      // console.log(data);
-      setProducts(data);
+  // const getproducts = async () => {
+  //   try{
+  //     const {data} = await axios("/products");
+  //     // console.log(data);
+  //     setProducts(data);
 
-    }catch(error){
-      console.log(error);
-    }
-  };
+  //   }catch(error){
+  //     console.log(error);
+  //   }
+  // };
 
 
-  useEffect(()=> {
-    getproducts();
-  },[]);
+  // useEffect(()=> {
+  //   getproducts();
+  // },[]);
 
 
   return <ProductContext.Provider value={[products, setProducts]}>

@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 
 const Create = () => {
 
+
+    
+
     const [tittle, settittle] =  useState("");
     const [image, setimage] =  useState("");
     const [category, setcategory] =  useState("");
